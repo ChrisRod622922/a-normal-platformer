@@ -1,0 +1,169 @@
+{
+	"layout": {
+		"scale": 64,
+		"size": [34, 14],
+		"start": [2, 3],
+		"goal": [33, 10, 1, 1]
+	},
+
+	"physics": {
+		"gravity": 1.5,
+		"terminal_velocity": 30
+	},
+
+	"music": "assets/sounds/theme.ogg",
+
+	"background": {
+		"color": [20, 62, 61],
+		"image1": "assets/images/backgrounds/Sky.png",
+		"image2": "assets/images/backgrounds/Hills_2.png",
+		"parallax_speed1": 0.6,
+		"parallax_speed2": 0.3
+	},
+
+	"tiles": {
+		"midground": [
+			[33, 10, "Door"]
+		],
+
+		"main": [
+
+			[0, 6, "Red_Platform"],
+			[1, 6, "Red_Platform"],
+			[2, 6, "Red_Platform"],
+			[3, 6, "Red_Platform"],
+			[4, 6, "Red_Platform"],
+			[5, 6, "Red_Platform"],
+			[6, 6, "Red_Platform"],
+			[7, 6, "Red_Platform"],
+			[8, 6, "Red_Platform"],
+			[9, 6, "Red_Platform"],
+			[10, 6, "Red_Platform"],
+			[11, 6, "Red_Platform"],
+			[12, 6, "Red_Platform"],
+			[13, 6, "Red_Platform"],
+			[14, 6, "Red_Platform"],
+			[15, 6, "Red_Platform"],
+			[15, 7, "Red_Platform"],
+			[16, 7, "Red_Platform"],
+			[16, 8, "Red_Platform"],
+			[17, 8, "Red_Platform"],
+			[17, 9, "Red_Platform"],
+			[18, 9, "Red_Platform"],
+			[18, 10, "Red_Platform"],
+			[19, 10, "Red_Platform"],
+			[19, 11, "Red_Platform"],
+			[20, 11, "Red_Platform"],
+			[21, 11, "Red_Platform"],
+			[22, 11, "Red_Platform"],
+			[23, 11, "Red_Platform"],
+			[24, 11, "Red_Platform"],
+			[25, 11, "Red_Platform"],
+			[26, 11, "Red_Platform"],
+			[27, 11, "Red_Platform"],
+			[28, 11, "Red_Platform"],
+			[29, 11, "Red_Platform"],
+			[30, 11, "Red_Platform"],
+			[31, 11, "Red_Platform"],
+			[32, 11, "Red_Platform"],
+			[33, 11, "Red_Platform"],
+			[34, 11, "Red_Platform"],
+
+			[10, 3, "Platform"],
+			[11, 3, "Platform"],
+			[12, 3, "Platform"],
+
+			[0, 13, "Lava_Surface"],
+			[1, 13, "Lava_Surface"],
+			[2, 13, "Lava_Surface"],
+			[3, 13, "Lava_Surface"],
+			[4, 13, "Lava_Surface"],
+			[5, 13, "Lava_Surface"],
+			[6, 13, "Lava_Surface"],
+			[7, 13, "Lava_Surface"],
+			[8, 13, "Lava_Surface"],
+			[9, 13, "Lava_Surface"],
+			[10, 13, "Lava_Surface"],
+			[11, 13, "Lava_Surface"],
+			[12, 13, "Lava_Surface"],
+			[13, 13, "Lava_Surface"],
+			[14, 13, "Lava_Surface"],
+			[15, 13, "Lava_Surface"],
+			[16, 13, "Lava_Surface"],
+			[17, 13, "Lava_Surface"],
+			[18, 13, "Lava_Surface"],
+			[19, 13, "Lava_Surface"],
+			[20, 13, "Lava_Surface"],
+			[21, 13, "Lava_Surface"],
+			[22, 13, "Lava_Surface"],
+			[23, 13, "Lava_Surface"],
+			[24, 13, "Lava_Surface"],
+			[25, 13, "Lava_Surface"],
+			[26, 13, "Lava_Surface"],
+			[27, 13, "Lava_Surface"],
+			[28, 13, "Lava_Surface"],
+			[29, 13, "Lava_Surface"],
+			[30, 13, "Lava_Surface"],
+			[31, 13, "Lava_Surface"],
+			[32, 13, "Lava_Surface"],
+			[33, 13, "Lava_Surface"],
+			[34, 13, "Lava_Surface"],
+
+			[21, 6, "Platform"],
+			[22, 6, "Platform"],
+			[23, 6, "Platform"],
+			[24, 6, "Platform"],
+			[25, 6, "Platform"],
+			[26, 6, "Platform"],
+			[27, 6, "Platform"],
+
+			[15, 1, "Platform"],
+			[16, 1, "Platform"],
+			[17, 1, "Platform"],
+			[18, 1, "Platform"],
+			[19, 1, "Platform"],
+			[20, 1, "Platform"],
+			[21, 1, "Platform"],
+			[22, 1, "Platform"],
+			[23, 1, "Platform"],
+			[24, 1, "Platform"],
+			[25, 1, "Platform"],
+			[26, 1, "Platform"],
+			[27, 1, "Platform"],
+			[28, 1, "Platform"],
+			[29, 1, "Platform"],
+			[30, 1, "Platform"],
+
+			[0, 1, "Platform"]
+		],
+
+		"foreground": [
+
+		]
+	},
+
+	"items": [
+		[6, 4, "Gem"],
+		[11, 0, "Gem"],
+		[21, 10, "Gem"],
+		[16, 0, "Gem"],
+		[18, 0, "Gem"],
+		[22, 0, "Gem"],
+		[21, 5, "Gem"],
+		[23, 5, "Gem"],
+		[25, 5, "Gem"],
+		[27, 5, "Gem"]
+
+	],
+
+	"enemies": [
+		[11, 2, "PlatformEnemy"],
+		[22, 0, "PlatformEnemy"],
+		[16, 0, "PlatformEnemy"],
+		[25, 0, "PlatformEnemy"],
+		[30, 0, "BasicEnemy"],
+		[19, 9, "BasicEnemy"],
+		[0, 0, "BasicEnemy"],
+		[21, 5, "PlatformEnemy"]
+	]
+}
