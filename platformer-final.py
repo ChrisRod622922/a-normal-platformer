@@ -28,8 +28,8 @@ FPS = 30
 show_grid = True
 grid_color = (150, 150, 150)
 
-#screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT),pygame.FULLSCREEN)
-screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT),pygame.FULLSCREEN)
+#screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 pygame.display.set_caption(TITLE)
 
 # Helper functions for loading assets
@@ -125,7 +125,7 @@ item_images = { "Gem": load_image('assets/images/items/platformPack_item008.png'
                 "Reverse_Gem": load_image('assets/images/items/platformPack_item010.png') }
 
 # Levels
-levels = ["assets/levels/level_4.json",
+levels = ["assets/levels/level_1.json",
           "assets/levels/level_2.json",
           "assets/levels/level_3.json",
           "assets/levels/level_4.json" ]
