@@ -1,9 +1,9 @@
 {
 	"layout": {
 		"scale": 64,
-		"size": [34, 14],
+		"size": [40, 14],
 		"start": [2, 3],
-		"goal": [33, 10, 1, 1]
+		"goal": [39, 10, 1, 1]
 	},
 
 	"physics": {
@@ -23,7 +23,7 @@
 
 	"tiles": {
 		"midground": [
-			[33, 10, "Door"]
+			[39, 10, "Door"]
 		],
 
 		"main": [
@@ -58,21 +58,49 @@
 			[22, 11, "Red_Platform"],
 			[23, 11, "Red_Platform"],
 			[24, 11, "Red_Platform"],
-			[25, 11, "Red_Platform"],
-			[26, 11, "Red_Platform"],
-			[27, 11, "Red_Platform"],
 			[28, 11, "Red_Platform"],
 			[29, 11, "Red_Platform"],
 			[30, 11, "Red_Platform"],
-			[31, 11, "Red_Platform"],
-			[32, 11, "Red_Platform"],
-			[33, 11, "Red_Platform"],
 			[34, 11, "Red_Platform"],
+			[35, 11, "Red_Platform"],
+			[36, 11, "Red_Platform"],
+			[37, 11, "Red_Platform"],
+			[38, 11, "Red_Platform"],
+			[39, 11, "Red_Platform"],
 
 			[10, 3, "Platform"],
 			[11, 3, "Platform"],
 			[12, 3, "Platform"],
 
+			[21, 6, "Platform"],
+			[22, 6, "Platform"],
+			[23, 6, "Platform"],
+			[24, 6, "Platform"],
+			[25, 6, "Platform"],
+			[26, 6, "Platform"],
+			[27, 6, "Platform"],
+
+			[15, 1, "Platform"],
+			[16, 1, "Platform"],
+			[17, 1, "Platform"],
+			[18, 1, "Platform"],
+			[19, 1, "Platform"],
+			[20, 1, "Platform"],
+			[21, 1, "Platform"],
+			[22, 1, "Platform"],
+			[23, 1, "Platform"],
+			[24, 1, "Platform"],
+			[25, 1, "Platform"],
+			[26, 1, "Platform"],
+			[27, 1, "Platform"],
+			[28, 1, "Platform"],
+			[29, 1, "Platform"],
+			[30, 1, "Platform"],
+
+			[0, 1, "Platform"]
+		],
+
+		"foreground": [
 			[0, 13, "Lava_Surface"],
 			[1, 13, "Lava_Surface"],
 			[2, 13, "Lava_Surface"],
@@ -108,37 +136,17 @@
 			[32, 13, "Lava_Surface"],
 			[33, 13, "Lava_Surface"],
 			[34, 13, "Lava_Surface"],
+			[35, 13, "Lava_Surface"],
+			[36, 13, "Lava_Surface"],
+			[37, 13, "Lava_Surface"],
+			[38, 13, "Lava_Surface"],
+			[39, 13, "Lava_Surface"],
 
-			[21, 6, "Platform"],
-			[22, 6, "Platform"],
-			[23, 6, "Platform"],
-			[24, 6, "Platform"],
-			[25, 6, "Platform"],
-			[26, 6, "Platform"],
-			[27, 6, "Platform"],
-
-			[15, 1, "Platform"],
-			[16, 1, "Platform"],
-			[17, 1, "Platform"],
-			[18, 1, "Platform"],
-			[19, 1, "Platform"],
-			[20, 1, "Platform"],
-			[21, 1, "Platform"],
-			[22, 1, "Platform"],
-			[23, 1, "Platform"],
-			[24, 1, "Platform"],
-			[25, 1, "Platform"],
-			[26, 1, "Platform"],
-			[27, 1, "Platform"],
-			[28, 1, "Platform"],
-			[29, 1, "Platform"],
-			[30, 1, "Platform"],
-
-			[0, 1, "Platform"]
-		],
-
-		"foreground": [
-
+			[4, 5, "Lamp"],
+			[15, 5, "Lamp"],
+			[22, 10, "Lamp"],
+			[29, 10, "Lamp"],
+			[36, 10, "Lamp"]
 		]
 	},
 

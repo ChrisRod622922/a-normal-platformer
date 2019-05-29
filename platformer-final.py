@@ -1,5 +1,5 @@
 # A Normal Platformer is developed by Christopher G. Rodriguez
-# Created April 24, 2019 (Updated on May 22, 2019)
+# Created April 24, 2019 (Updated on May 29, 2019)
 #
 # 5th Period Programming
 # See READ_ME file for instructions and credits!
@@ -25,7 +25,7 @@ TITLE = "A Normal Platformer"
 FPS = 30
 
 # Optional grid for help with level design
-show_grid = False
+show_grid = True
 grid_color = (150, 150, 150)
 
 #screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT),pygame.FULLSCREEN)
@@ -103,13 +103,14 @@ hero_images = { "idle_rt": idle,
                 "jump_lt": flip_image(jump),
                 "hurt_lt": flip_image(hurt) }
              
-tile_images = { "Dirt": load_image('assets/images/tiles/platformPack_tile001.png'),
+tile_images = { "Grass": load_image('assets/images/tiles/platformPack_tile001.png'),
                 "Platform": load_image('assets/images/tiles/platformPack_tile041.png'),
                 "Red_Platform": load_image('assets/images/tiles/platformPack_tile020.png'),
                 "Sand": load_image('assets/images/tiles/platformPack_tile002.png'),
                 "Dirt": load_image('assets/images/tiles/platformPack_tile004.png'),
                 "Lava_Surface": load_image('assets/images/tiles/platformPack_tile006.png'),
                 "Lava": load_image('assets/images/tiles/platformPack_tile018.png'),
+                "Lamp": load_image('assets/images/tiles/lamp.png'),
                 "Door": load_image('assets/images/tiles/platformPack_tile048.png') }
         
 basic_enemy_images = [ load_image('assets/images/characters/platformPack_tile024a.png'),
@@ -120,10 +121,11 @@ platform_enemy_images = [ load_image('assets/images/characters/platformPack_tile
 
 spike_enemy_images = [ load_image('assets/images/characters/platformPack_tile043.png') ]
 
-item_images = { "Gem": load_image('assets/images/items/platformPack_item008.png') }
+item_images = { "Gem": load_image('assets/images/items/platformPack_item008.png'),
+                "Reverse_Gem": load_image('assets/images/items/platformPack_item010.png') }
 
 # Levels
-levels = ["assets/levels/level_1.json",
+levels = ["assets/levels/level_4.json",
           "assets/levels/level_2.json",
           "assets/levels/level_3.json",
           "assets/levels/level_4.json" ]
@@ -152,11 +154,13 @@ class Hero(pygame.sprite.Sprite):
         self.vx = 0
         self.vy = 0
 
+        self.inverse = False
+
         self.hearts = 1
         self.hurt_timer = 0
     
         self.reached_goal = False
-        self.score = 0
+        self.score = 3000
 
         self.facing_right = True
         self.steps = 0
@@ -205,25 +209,49 @@ class Hero(pygame.sprite.Sprite):
             self.vy = level.terminal_velocity
 
     def move_and_check_tiles(self, level):
-        self.rect.x += self.vx
-        hit_list = pygame.sprite.spritecollide(self, level.main_tiles, False)
+        if self.inverse == False:
+            
+            self.rect.x += self.vx
+            hit_list = pygame.sprite.spritecollide(self, level.main_tiles, False)
 
-        for hit in hit_list:
-            if self.vx > 0:
-                self.rect.right = hit.rect.left
-            elif self.vx < 0:
-                self.rect.left = hit.rect.right
-            self.vx = 0
+            for hit in hit_list:
+                if self.vx > 0:
+                    self.rect.right = hit.rect.left
+                elif self.vx < 0:
+                    self.rect.left = hit.rect.right
+                self.vx = 0
+                    
+            self.rect.y += self.vy
+            hit_list = pygame.sprite.spritecollide(self, level.main_tiles, False)
+
+            for hit in hit_list:
+                if self.vy > 0:
+                    self.rect.bottom = hit.rect.top
+                elif self.vy < 0:
+                    self.rect.top = hit.rect.bottom
+                self.vy = 0
                 
-        self.rect.y += self.vy
-        hit_list = pygame.sprite.spritecollide(self, level.main_tiles, False)
+        elif self.inverse == True:
+            
+            self.rect.x -= self.vx
+            hit_list = pygame.sprite.spritecollide(self, level.main_tiles, False)
 
-        for hit in hit_list:
-            if self.vy > 0:
-                self.rect.bottom = hit.rect.top
-            elif self.vy < 0:
-                self.rect.top = hit.rect.bottom
-            self.vy = 0
+            for hit in hit_list:
+                if self.vx > 0:
+                    self.rect.right = hit.rect.left
+                elif self.vx < 0:
+                    self.rect.left = hit.rect.right
+                self.vx = 0
+                    
+            self.rect.y += self.vy
+            hit_list = pygame.sprite.spritecollide(self, level.main_tiles, False)
+
+            for hit in hit_list:
+                if self.vy > 0:
+                    self.rect.bottom = hit.rect.top
+                elif self.vy < 0:
+                    self.rect.top = hit.rect.bottom
+                self.vy = 0
 
     def process_items(self, level):
         hit_list = pygame.sprite.spritecollide(self, level.items, True)
@@ -243,10 +271,15 @@ class Hero(pygame.sprite.Sprite):
                 self.hurt_timer = 30
     
     def check_world_edges(self, level):
+        ''' Horizontal detection '''
         if self.rect.left < 0:
             self.rect.left = 0
         elif self.rect.right > level.width:
             self.rect.right = level.width
+
+        ''' Vertical detection '''
+        if self.rect.top > level.height:
+            self.hearts = 0
 
     def check_goal(self, level):
         self.reached_goal = level.goal.contains(self.rect)
@@ -339,12 +372,17 @@ class BasicEnemy(pygame.sprite.Sprite):
             self.vy = 0
             
     def check_world_edges(self, level):
+        ''' Horizontal '''
         if self.rect.left < 0:
             self.rect.left = 0
             self.should_reverse = True
         elif self.rect.right > level.width:
             self.rect.right = level.width
             self.should_reverse = True
+
+        ''' Vertical '''
+        if self.rect.top > level.height:
+            self.kill()
         
     def step(self):
         self.steps = (self.steps + 1) % self.step_rate
@@ -473,12 +511,17 @@ class FastEnemy(pygame.sprite.Sprite):
             self.vy = 0
             
     def check_world_edges(self, level):
+        ''' Horizontal '''
         if self.rect.left < 0:
             self.rect.left = 0
             self.should_reverse = True
         elif self.rect.right > level.width:
             self.rect.right = level.width
             self.should_reverse = True
+
+        ''' Vertical '''
+        if self.rect.top > level.height:
+            self.kill()
         
     def step(self):
         self.steps = (self.steps + 1) % self.step_rate
@@ -564,11 +607,12 @@ class Gem(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
 
-        self.value = 50
+        self.value = -50
 
     def apply(self, hero):
         gem_snd.play()
         hero.score += self.value
+        hero.inverse = False
         
     def update(self, level):
         '''
@@ -577,6 +621,26 @@ class Gem(pygame.sprite.Sprite):
         then here is where you can implement that.
         '''
         pass
+
+
+class ReverseGem(pygame.sprite.Sprite):
+    def __init__(self, x, y, image):
+        super().__init__()
+
+        self.image = image
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+        self.value = 0
+
+    def apply(self, hero):
+        gem_snd.play()
+        hero.inverse = True
+        
+    def update(self, level):
+        pass
+
 
 class Level():
     def __init__(self, file_path):
@@ -664,6 +728,8 @@ class Level():
             
             if kind == "Gem":
                 s = Gem(x, y, item_images[kind])
+            elif kind == "Reverse_Gem":
+                s = ReverseGem(x, y, item_images[kind])
                 
             self.items.add(s)
 
