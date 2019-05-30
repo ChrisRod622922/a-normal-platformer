@@ -268,8 +268,8 @@
 	},
 
 	"items": [
-		[5, 5, "Reverse_Gem"],
-		[12, 5, "Gem"]
+		[5, 5, "Gem"],
+		[12, 5, "Reverse_Gem"]
 	],
 
 	"enemies": [
