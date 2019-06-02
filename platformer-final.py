@@ -32,6 +32,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT),pygame.FULLSCREEN
 #screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 pygame.display.set_caption(TITLE)
 
+
 # Helper functions for loading assets
 def load_font(font_face, font_size):
     return pygame.font.Font(font_face, font_size)

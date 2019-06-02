@@ -1,8 +1,8 @@
 {
 	"layout": {
 		"scale": 64,
-		"size": [37, 16],
-		"start": [3, 13],
+		"size": [37, 15],
+		"start": [1, 2],
 		"goal": [36, 13, 1, 1]
 	},
 
@@ -34,104 +34,151 @@
 			[4, 14, "Red_Platform"],
 			[5, 14, "Red_Platform"],
 			[6, 14, "Red_Platform"],
-
 			[7, 14, "Red_Platform"],
 			[8, 14, "Red_Platform"],
 			[9, 14, "Red_Platform"],
-
+			[10, 14, "Red_Platform"],
+			[11, 14, "Red_Platform"],
 			[12, 14, "Red_Platform"],
-
+			[13, 14, "Red_Platform"],
+			[14, 14, "Red_Platform"],
 			[15, 14, "Red_Platform"],
-
+			[16, 14, "Red_Platform"],
+			[17, 14, "Red_Platform"],
 			[18, 14, "Red_Platform"],
 			[19, 14, "Red_Platform"],
 			[20, 14, "Red_Platform"],
-
+			[21, 14, "Red_Platform"],
+			[22, 14, "Red_Platform"],
 			[23, 14, "Red_Platform"],
-
+			[24, 14, "Red_Platform"],
+			[25, 14, "Red_Platform"],
 			[26, 14, "Red_Platform"],
-
+			[27, 14, "Red_Platform"],
+			[28, 14, "Red_Platform"],
 			[29, 14, "Red_Platform"],
-
+			[30, 14, "Red_Platform"],
+			[31, 14, "Red_Platform"],
 			[32, 14, "Red_Platform"],
 			[33, 14, "Red_Platform"],
 			[34, 14, "Red_Platform"],
 			[35, 14, "Red_Platform"],
 			[36, 14, "Red_Platform"],
 
-			[5, 11, "Platform"],
-			[6, 11, "Platform"],
-			[7, 11, "Platform"],
+			[1, 3, "Platform"],
+			[2, 3, "Platform"],
+			[3, 3, "Platform"],
+			[2, 4, "Platform"],
+			[2, 5, "Platform"],
+			[2, 6, "Platform"],
+			[2, 7, "Platform"],
 
-			[35, 11, "Platform"],
-			[36, 10, "Platform"],
+			[5, 3, "Platform"],
+			[5, 4, "Platform"],
+			[5, 5, "Platform"],
+			[5, 6, "Platform"],
+			[5, 7, "Platform"],
+			[8, 3, "Platform"],
+			[8, 4, "Platform"],
+			[8, 5, "Platform"],
+			[8, 6, "Platform"],
+			[8, 7, "Platform"],
+			[6, 5, "Platform"],
+			[7, 5, "Platform"],
 
-			[34, 8, "Platform"],
-			[33, 8, "Platform"],
+			[10, 3, "Platform"],
+			[10, 4, "Platform"],
+			[10, 5, "Platform"],
+			[10, 6, "Platform"],
+			[10, 7, "Platform"],
+			[11, 3, "Platform"],
+			[12, 3, "Platform"],
+			[11, 5, "Platform"],
+			[12, 5, "Platform"],
+			[11, 7, "Platform"],
+			[12, 7, "Platform"],
 
-			[31, 6, "Platform"],
-			[30, 6, "Platform"],
+			[15, 3, "Platform"],
+			[15, 4, "Platform"],
+			[15, 5, "Platform"],
+			[15, 6, "Platform"],
+			[15, 7, "Platform"],
+			[16, 3, "Platform"],
+			[17, 3, "Platform"],
+			[16, 5, "Platform"],
+			[17, 5, "Platform"],
+			[16, 7, "Platform"],
+			[17, 7, "Platform"],
 
-			[4, 4, "Platform"],
-			[4, 4, "Platform"]
+			[19, 3, "Platform"],
+			[19, 4, "Platform"],
+			[19, 5, "Platform"],
+			[19, 6, "Platform"],
+			[19, 7, "Platform"],
+			[22, 3, "Platform"],
+			[22, 4, "Platform"],
+			[22, 5, "Platform"],
+			[22, 6, "Platform"],
+			[22, 7, "Platform"],
+			[20, 6, "Platform"],
+			[20, 5, "Platform"],
+			[21, 5, "Platform"],
+			[21, 4, "Platform"],
 
+			[24, 3, "Platform"],
+			[24, 4, "Platform"],
+			[24, 5, "Platform"],
+			[24, 6, "Platform"],
+			[24, 7, "Platform"],
+			[25, 3, "Platform"],
+			[26, 3, "Platform"],
+			[25, 7, "Platform"],
+			[26, 7, "Platform"],
+			[27, 4, "Platform"],
+			[27, 5, "Platform"],
+			[27, 6, "Platform"],
+
+			[30, 10, "Platform"],
+			[31, 10, "Platform"],
+			[32, 10, "Platform"]
 		],
 
 		"foreground": [
-			[1, 13, "Lamp"],
 			[4, 13, "Lamp"],
-
 			[8, 13, "Lamp"],
-
-			[12, 13, "Lamp"],
-
-			[19, 13, "Lamp"],
-
-			[26, 5, "Lamp"],
-
-			[33, 5, "Lamp"],
-			[35, 5, "Lamp"],
-
-			[6, 10, "Lamp"]
+			[16, 13, "Lamp"],
+			[20, 13, "Lamp"],
+			[24, 13, "Lamp"],
+			[28, 13, "Lamp"],
+			[32, 13, "Lamp"],
+			[34, 13, "Lamp"]
 		]
 	},
 
 	"items": [
 		[2, 13, "Gem"],
+		[7, 13, "Gem"],
+		[12, 13, "Gem"],
+		[17, 13, "Gem"],
+		[22, 13, "Gem"],
+		[27, 13, "Gem"],
+		[31, 13, "Gem"],
 
-		[5, 10, "Gem"],
-		[6, 10, "Gem"],
-		[7, 10, "Gem"],
-
-		[15, 13, "Gem"],
-
-		[20, 13, "Reverse_Gem"],
-
-		[23, 13, "Gem"],
-
-		[29, 13, "Gem"],
-
-		[31, 5, "Gem"],
-
-		[4, 3, "Gem"],
-		[4, 3, "Gem"]
+		[11, 2, "Gem"],
+		[17, 2, "Gem"],
+		[25, 2, "Gem"]
 	],
 
 	"enemies": [
-		[0, 13, "FastEnemy"],
-		[5, 13, "PlatformEnemy"],
-		[3, 10, "SpikeEnemy"],
-		[4, 9, "SpikeEnemy"],
-		[5, 8, "SpikeEnemy"],
-		[6, 7, "SpikeEnemy"],
-
-		[8, 13, "PlatformEnemy"],
-
-		[19, 13, "PlatformEnemy"],
-
-		[32, 13, "PlatformEnemy"],
-		[35, 13, "PlatformEnemy"],
-
-		[30, 5, "PlatformEnemy"]
+		[0, 13, "BasicEnemy"],
+		[5, 13, "BasicEnemy"],
+		[9, 13, "BasicEnemy"],
+		[14, 13, "BasicEnemy"],
+		[15, 13, "BasicEnemy"],
+		[18, 13, "BasicEnemy"],
+		[23, 13, "BasicEnemy"],
+		[29, 13, "BasicEnemy"],
+		[31, 13, "BasicEnemy"],
+		[35, 13, "BasicEnemy"]
 	]
 }
