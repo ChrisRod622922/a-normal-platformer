@@ -125,7 +125,7 @@ item_images = { "Gem": load_image('assets/images/items/platformPack_item008.png'
                 "Reverse_Gem": load_image('assets/images/items/platformPack_item010.png') }
 
 # Levels
-levels = ["assets/levels/level_4.json",
+levels = ["assets/levels/level_1.json",
           "assets/levels/level_2.json",
           "assets/levels/level_3.json",
           "assets/levels/level_4.json" ]
@@ -160,7 +160,7 @@ class Hero(pygame.sprite.Sprite):
         self.hurt_timer = 0
     
         self.reached_goal = False
-        self.score = 3000
+        self.score = 4000
 
         self.facing_right = True
         self.steps = 0
@@ -873,6 +873,7 @@ class Game():
     WIN = 3
     LOSE = 4
     PAUSE = 5
+    COIN_LOSE = 6
 
     def __init__(self, levels):
         self.clock = pygame.time.Clock()
@@ -910,7 +911,10 @@ class Game():
             self.load_level()
             self.start_level()
         else:
-            self.stage = Game.WIN
+            if Hero.score != 0:
+                self.stage = Game.COIN_LOSE
+            else:
+                self.stage = Game.WIN
 
     def show_title_screen(self):
         text = font_xl.render(TITLE, 1, WHITE)
@@ -946,6 +950,18 @@ class Game():
 
     def show_lose_screen(self):
         text = font_lg.render("YOU HAVE DIED.", 1, RED)
+        text2 = font_md.render("Press SPACE to play again or ESC to exit.", 1, WHITE)
+        rect = text.get_rect()
+        rect2 = text2.get_rect()
+        rect.centerx = SCREEN_WIDTH // 2
+        rect.centery = 330
+        rect2.centerx = SCREEN_WIDTH // 2
+        rect2.centery = 380
+        screen.blit(text, rect)
+        screen.blit(text2, rect2)
+
+    def show_lose_screen_coins(self):
+        text = font_lg.render("YOU DID NOT COLLECT ALL OF THE GEMS.", 1, RED)
         text2 = font_md.render("Press SPACE to play again or ESC to exit.", 1, WHITE)
         rect = text.get_rect()
         rect2 = text2.get_rect()
@@ -1025,7 +1041,7 @@ class Game():
                         self.stage = Game.PLAYING
                         unpause_music()
 
-                elif self.stage == Game.WIN or self.stage == Game.LOSE:
+                elif self.stage == Game.WIN or self.stage == Game.LOSE or self.stage == Game.COIN_LOSE:
                     if event.key == pygame.K_SPACE:
                         self.setup()
 
@@ -1088,6 +1104,8 @@ class Game():
             self.show_win_screen()
         elif self.stage == Game.LOSE:
             self.show_lose_screen()
+        elif self.stage == Game.COIN_LOSE:
+            self.show_lose_screen_coins()
         elif self.stage == Game.PAUSE:
             self.show_pause()
 
