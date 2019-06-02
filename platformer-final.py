@@ -125,7 +125,7 @@ item_images = { "Gem": load_image('assets/images/items/platformPack_item008.png'
                 "Reverse_Gem": load_image('assets/images/items/platformPack_item010.png') }
 
 # Levels
-levels = ["assets/levels/level_1.json",
+levels = ["assets/levels/level_4.json",
           "assets/levels/level_2.json",
           "assets/levels/level_3.json",
           "assets/levels/level_4.json" ]
@@ -546,7 +546,55 @@ class FastEnemy(pygame.sprite.Sprite):
         self.set_image()
 
 
+class FastPlatformEnemy(FastEnemy):
+    '''
+    FastPlatformEnemies behave the same as BasicEnemies, except
+    that they are aware of platform edges and will turn around
+    when the edge is reached. Only init and the overridden
+    function move_and_check_walls needs to be included.
+    '''
+    
+    def __init__(self, x, y, images):
+        super().__init__(x, y, images)
+
+    def move_and_check_tiles(self, level):
+        reverse = False
+
+        self.rect.x += self.vx
+        hit_list = pygame.sprite.spritecollide(self, level.main_tiles, False)
+
+        for hit in hit_list:
+            if self.vx > 0:
+                self.rect.right = hit.rect.left
+            elif self.vx < 0:
+                self.rect.left = hit.rect.right
+            self.should_reverse = True
+
+        self.rect.y += 2
+        hit_list = pygame.sprite.spritecollide(self, level.main_tiles, False)
+        
+        on_platform = False
+
+        for hit in hit_list:
+            if self.vy >= 0:
+                self.rect.bottom = hit.rect.top
+                self.vy = 0
+
+                if self.vx > 0 and self.rect.right <= hit.rect.right:
+                    on_platform = True
+                elif self.vx < 0 and self.rect.left >= hit.rect.left:
+                    on_platform = True
+
+            elif self.vy < 0:
+                self.rect.top = hit.rect.bottom
+                self.vy = 0
+
+        if not on_platform:
+            self.should_reverse = True
+
+
 class SpikeEnemy(pygame.sprite.Sprite):
+    ''' Spike enemies fall, nothing else. '''
     
     def __init__(self, x, y, images):
         super().__init__()
@@ -747,6 +795,8 @@ class Level():
                 s = PlatformEnemy(x, y, platform_enemy_images)
             elif kind == "FastEnemy":
                 s = FastEnemy(x, y, basic_enemy_images)
+            elif kind == "FastPlatformEnemy":
+                s = FastPlatformEnemy(x, y, platform_enemy_images)
             elif kind == "SpikeEnemy":
                 s = SpikeEnemy(x, y, spike_enemy_images)
                 

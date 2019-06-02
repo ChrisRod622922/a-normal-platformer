@@ -263,18 +263,45 @@
 		],
 
 		"foreground": [
-			[7, 5, "Lamp"]
+			[7, 5, "Lamp"],
+			[13, 5, "Lamp"],
+			[17, 5, "Lamp"],
+			[21, 5, "Lamp"],
+
+			[27, 5, "Lamp"],
+			[32, 5, "Lamp"],
+			[35, 5, "Lamp"],
+			[38, 5, "Lamp"],
+			[41, 5, "Lamp"]
 		]
 	},
 
 	"items": [
 		[5, 5, "Gem"],
-		[12, 5, "Reverse_Gem"]
+		[12, 5, "Reverse_Gem"],
+
+		[26, 5, "Gem"],
+		[28, 5, "Gem"],
+		[29, 5, "Gem"],
+		[34, 5, "Gem"],
+		[36, 5, "Gem"],
+		[38, 5, "Gem"],
+		[40, 5, "Gem"],
+		[42, 5, "Gem"]
 	],
 
 	"enemies": [
 		[0, 0, "SpikeEnemy"],
 		[1, 0, "SpikeEnemy"],
-		[2, 0, "SpikeEnemy"]
+		[2, 0, "SpikeEnemy"],
+
+		[14, 5, "PlatformEnemy"],
+		[17, 5, "PlatformEnemy"],
+		[20, 5, "PlatformEnemy"],
+
+		[27, 5, "FastPlatformEnemy"],
+		[31, 5, "FastPlatformEnemy"],
+		[35, 5, "FastPlatformEnemy"],
+		[39, 5, "FastPlatformEnemy"]
 	]
 }
