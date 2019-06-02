@@ -165,7 +165,7 @@ class Hero(pygame.sprite.Sprite):
         self.hurt_timer = 0
     
         self.reached_goal = False
-        self.score = 5000
+        self.score = 8000
 
         self.facing_right = True
         self.steps = 0
