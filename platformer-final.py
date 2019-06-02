@@ -911,7 +911,7 @@ class Game():
             self.load_level()
             self.start_level()
         else:
-            if Hero.score != 0:
+            if self.hero.score != 0:
                 self.stage = Game.COIN_LOSE
             else:
                 self.stage = Game.WIN
