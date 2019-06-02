@@ -1,0 +1,105 @@
+{
+	"layout": {
+		"scale": 64,
+		"size": [20, 40],
+		"start": [9, 0],
+		"goal": [19, 38, 1, 1]
+	},
+
+	"physics": {
+		"gravity": 1.5,
+		"terminal_velocity": 30
+	},
+
+	"music": "assets/sounds/theme.ogg",
+
+	"background": {
+		"color": [20, 62, 61],
+		"image1": "assets/images/backgrounds/Sky.png",
+		"image2": "assets/images/backgrounds/Hills_2.png",
+		"parallax_speed1": 0.6,
+		"parallax_speed2": 0.3
+	},
+
+	"tiles": {
+		"midground": [
+			[19, 38, "Door"]
+		],
+
+		"main": [
+			[7, 10, "Platform"],
+			[8, 10, "Platform"],
+			[9, 10, "Platform"],
+			[10, 10, "Platform"],
+
+			[15, 15, "Platform"],
+			[16, 15, "Platform"],
+			[17, 15, "Platform"],
+
+			[3, 25, "Platform"],
+			[4, 25, "Platform"],
+			[5, 25, "Platform"],
+
+			[4, 30, "Platform"],
+			[5, 30, "Platform"],
+			[6, 30, "Platform"],
+			[7, 30, "Platform"],
+			[8, 30, "Platform"],
+
+			[0, 39, "Platform"],
+			[1, 39, "Platform"],
+			[2, 39, "Platform"],
+			[3, 39, "Platform"],
+			[4, 39, "Platform"],
+			[5, 39, "Platform"],
+			[6, 39, "Platform"],
+			[7, 39, "Platform"],
+			[8, 39, "Platform"],
+			[9, 39, "Platform"],
+			[10, 39, "Platform"],
+			[11, 39, "Platform"],
+			[12, 39, "Platform"],
+			[13, 39, "Platform"],
+			[14, 39, "Platform"],
+			[15, 39, "Platform"],
+			[16, 39, "Platform"],
+			[17, 39, "Platform"],
+			[18, 39, "Platform"],
+			[19, 39, "Platform"]
+		],
+
+		"foreground": [
+		]
+	},
+
+	"items": [
+		[9, 3, "Gem"],
+		[10, 6, "Gem"],
+		[11, 9, "Gem"],
+		[12, 11, "Gem"],
+		[12, 12, "Gem"],
+		[12, 13, "Gem"],
+		[13, 25, "Gem"],
+		[11, 30, "Gem"],
+		[10, 32, "Gem"],
+		[9, 34, "Gem"]
+	],
+
+	"enemies": [
+		[7, 9, "FastPlatformEnemy"],
+		[9, 9, "FastPlatformEnemy"],
+
+		[16, 14, "FastPlatformEnemy"],
+
+		[4, 24, "FastPlatformEnemy"],
+
+		[4, 29, "FastPlatformEnemy"],
+		[6, 29, "FastPlatformEnemy"],
+		[8, 29, "FastPlatformEnemy"],
+
+		[3, 38, "BasicEnemy"],
+		[8, 38, "FastEnemy"],
+		[13, 38, "BasicEnemy"],
+		[17, 38, "FastEnemy"]
+	]
+}

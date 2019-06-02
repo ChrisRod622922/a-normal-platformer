@@ -1,0 +1,130 @@
+{
+	"layout": {
+		"scale": 64,
+		"size": [37, 14],
+		"start": [18, 1],
+		"goal": [36, 12, 1, 1]
+	},
+
+	"physics": {
+		"gravity": 1.5,
+		"terminal_velocity": 30
+	},
+
+	"music": "assets/sounds/theme.ogg",
+
+	"background": {
+		"color": [20, 62, 61],
+		"image1": "assets/images/backgrounds/Sky.png",
+		"image2": "assets/images/backgrounds/Hills_2.png",
+		"parallax_speed1": 0.6,
+		"parallax_speed2": 0.3
+	},
+
+	"tiles": {
+		"midground": [
+			[36, 12, "Door"]
+		],
+
+		"main": [
+			[18, 2, "Red_Platform"],
+			[19, 3, "Red_Platform"],
+			[20, 4, "Red_Platform"],
+			[21, 5, "Red_Platform"],
+			[22, 6, "Red_Platform"],
+			[23, 7, "Red_Platform"],
+			[24, 8, "Red_Platform"],
+			[25, 9, "Red_Platform"],
+			[26, 10, "Red_Platform"],
+			[27, 11, "Red_Platform"],
+			[29, 13, "Red_Platform"],
+			[30, 13, "Red_Platform"],
+			[31, 13, "Red_Platform"],
+			[32, 13, "Red_Platform"],
+			[33, 13, "Red_Platform"],
+			[34, 13, "Red_Platform"],
+			[35, 13, "Red_Platform"],
+			[36, 13, "Red_Platform"],
+
+			[17, 3, "Red_Platform"],
+			[16, 4, "Red_Platform"],
+			[15, 5, "Red_Platform"],
+			[14, 6, "Red_Platform"],
+			[13, 7, "Red_Platform"],
+			[12, 8, "Red_Platform"],
+			[11, 9, "Red_Platform"],
+			[10, 10, "Red_Platform"],
+			[9, 11, "Red_Platform"],
+			[7, 13, "Red_Platform"],
+			[6, 13, "Red_Platform"],
+			[5, 13, "Red_Platform"],
+			[4, 13, "Red_Platform"],
+			[3, 13, "Red_Platform"],
+			[2, 13, "Red_Platform"],
+			[1, 13, "Red_Platform"],
+			[0, 13, "Red_Platform"],
+
+			[1, 13, "Red_Platform"],
+			[2, 13, "Red_Platform"],
+			[3, 13, "Red_Platform"],
+			[4, 13, "Red_Platform"],
+			[5, 13, "Red_Platform"],
+			[6, 13, "Red_Platform"],
+			[7, 13, "Red_Platform"],
+			[8, 13, "Red_Platform"],
+			[9, 13, "Red_Platform"],
+			[10, 13, "Red_Platform"],
+			[11, 13, "Red_Platform"],
+			[12, 13, "Red_Platform"],
+			[13, 13, "Red_Platform"],
+			[14, 13, "Red_Platform"],
+			[15, 13, "Red_Platform"],
+			[16, 13, "Red_Platform"],
+			[17, 13, "Red_Platform"],
+			[18, 13, "Red_Platform"],
+			[19, 13, "Red_Platform"],
+			[20, 13, "Red_Platform"],
+			[21, 13, "Red_Platform"],
+			[22, 13, "Red_Platform"],
+			[23, 13, "Red_Platform"],
+			[24, 13, "Red_Platform"],
+			[25, 13, "Red_Platform"],
+			[26, 13, "Red_Platform"],
+			[27, 13, "Red_Platform"],
+			[28, 13, "Red_Platform"],
+			[29, 13, "Red_Platform"],
+			[30, 13, "Red_Platform"],
+			[31, 13, "Red_Platform"],
+			[32, 13, "Red_Platform"],
+			[33, 13, "Red_Platform"],
+			[34, 13, "Red_Platform"],
+			[35, 13, "Red_Platform"]
+		],
+
+		"foreground": [
+			[14, 12, "Lamp"],
+			[22, 12, "Lamp"]
+		]
+	},
+
+	"items": [
+		[19, 2, "Gem"],
+		[21, 4, "Gem"],
+		[23, 6, "Gem"],
+		[25, 8, "Gem"],
+
+		[17, 2, "Gem"],
+		[15, 4, "Gem"],
+		[13, 6, "Gem"],
+		[11, 8, "Gem"],
+
+		[17, 12, "Gem"],
+		[19, 12, "Gem"]
+	],
+
+	"enemies": [
+		[5, 12, "FastEnemy"],
+		[12, 12, "FastEnemy"],
+		[19, 12, "FastEnemy"]
+	]
+}

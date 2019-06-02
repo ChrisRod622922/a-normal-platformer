@@ -128,7 +128,11 @@ item_images = { "Gem": load_image('assets/images/items/platformPack_item008.png'
 levels = ["assets/levels/level_1.json",
           "assets/levels/level_2.json",
           "assets/levels/level_3.json",
-          "assets/levels/level_4.json" ]
+          "assets/levels/level_4.json",
+          "assets/levels/level_5.json",
+          "assets/levels/level_6.json",
+          "assets/levels/level_7.json",
+          "assets/levels/level_8.json" ]
     
 # Sprite classes
 class Tile(pygame.sprite.Sprite):
@@ -160,7 +164,7 @@ class Hero(pygame.sprite.Sprite):
         self.hurt_timer = 0
     
         self.reached_goal = False
-        self.score = 4000
+        self.score = 5000
 
         self.facing_right = True
         self.steps = 0
