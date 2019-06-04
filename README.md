@@ -48,20 +48,20 @@ In order to win the game, your score must equal 0. This is accomplished by acqui
 
 ### Credits
 
-####Images
+#### Images
 https://kenney.nl/assets/simplified-platformer-pack (Characters, Platforms, Items)
 https://bayat.itch.io/platform-game-assets/ (Backgrounds)
 https://www.deviantart.com/shippd/art/Blue-sky-s-at-night-119039391 (Blue sky's at night by ShippD on DeviantArt) (Start screen)
 
-####Sounds
+#### Sounds
 https://freesound.org/people/Leszek_Szary/sounds/146726/ (Jump)
 https://freesound.org/people/DrMinky/sounds/166184/ (Gem)
 https://freesound.org/people/Leszek_Szary/sounds/171670/ (Completion of Level)
 https://freesound.org/people/Kastenfrosch/sounds/162458/ (Win)
 https://freesound.org/people/ProjectsU012/sounds/333785/ (Lose)
 
-####Music
+#### Music
 https://freesound.org/people/bolkmar/sounds/412345/ (Main Theme)
 
-####Fonts
+#### Fonts
 https://www.1001fonts.com/cheri-font.html (Cheri Font Family)
