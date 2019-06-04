@@ -87,6 +87,9 @@ font_xl = load_font("assets/fonts/Cheri.ttf", 80)
 # Sounds
 jump_snd = load_sound('assets/sounds/jump.ogg')
 gem_snd = load_sound('assets/sounds/gem.ogg')
+complete_snd = load_sound('assets/sounds/complete.ogg')
+win_snd = load_sound('assets/sounds/win.ogg')
+lose_snd = load_sound('assets/sounds/lose.ogg')
 
 # Images
 idle = load_image('assets/images/characters/platformChar_idle.png')
@@ -912,14 +915,17 @@ class Game():
             
     def advance(self):
         if self.current_level < len(self.levels):
+            complete_snd.play()
             self.current_level += 1
             self.load_level()
             self.start_level()
         else:
             if self.hero.score != 0:
                 self.stage = Game.COIN_LOSE
+                lose_snd.play()
             else:
                 self.stage = Game.WIN
+                win_snd.play()
 
     def show_title_screen(self):
         text = font_xl.render(TITLE, 1, WHITE)
@@ -1070,6 +1076,7 @@ class Game():
                 self.cleared_timer = self.level_change_delay
             elif self.hero.hearts == 0:
                 self.stage = Game.LOSE
+                lose_snd.play()
                 stop_music()
                 
         elif self.stage == Game.CLEARED:

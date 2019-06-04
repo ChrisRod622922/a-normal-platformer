@@ -1,13 +1,17 @@
 Images
 https://kenney.nl/assets/simplified-platformer-pack (Characters, Platforms, Items)
 https://bayat.itch.io/platform-game-assets/ (Backgrounds)
+https://www.deviantart.com/shippd/art/Blue-sky-s-at-night-119039391 (Blue sky's at night by ShippD on DeviantArt) (Start screen)
 
 Sounds
-https://freesound.org/people/Lefty_Studios/sounds/369515/ (Jump)
-https://freesound.org/people/ProjectsU012/sounds/341695/ (Gem)
+https://freesound.org/people/Leszek_Szary/sounds/146726/ (Jump)
+https://freesound.org/people/DrMinky/sounds/166184/ (Gem)
+https://freesound.org/people/Leszek_Szary/sounds/171670/ (Completion of Level)
+https://freesound.org/people/Kastenfrosch/sounds/162458/ (Win)
+https://freesound.org/people/ProjectsU012/sounds/333785/ (Lose)
 
 Music
-https://freesound.org/people/Tristan_Lohengrin/sounds/343835/ (Main Theme)
+https://freesound.org/people/bolkmar/sounds/412345/ (Main Theme)
 
 Fonts
 https://www.1001fonts.com/cheri-font.html (Cheri Font Family)
