@@ -64,3 +64,4 @@ https://freesound.org/people/bolkmar/sounds/412345/ (Main Theme)
 
 #### Fonts
 https://www.1001fonts.com/cheri-font.html (Cheri Font Family)
+https://www.1001fonts.com/goodfish-font.html
