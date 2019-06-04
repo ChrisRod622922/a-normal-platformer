@@ -14,6 +14,12 @@ import json
 import os
 import sys
 
+if getattr(sys, 'frozen', False):
+    application_path = sys._MEIPASS + '/'
+else:
+    application_path = os.path.dirname(__file__) + '/'
+
+
 # Initialize game engine
 pygame.mixer.pre_init()
 pygame.init()
@@ -82,21 +88,21 @@ font_xs = load_font(None, 16)
 font_sm = load_font(None, 32)
 font_md = load_font(None, 48)
 font_lg = load_font(None, 64)
-font_xl = load_font("assets/fonts/Cheri.ttf", 80)
+font_xl = load_font(application_path + "assets/fonts/Cheri.ttf", 80)
 
 # Sounds
-jump_snd = load_sound('assets/sounds/jump.ogg')
-gem_snd = load_sound('assets/sounds/gem.ogg')
-complete_snd = load_sound('assets/sounds/complete.ogg')
-win_snd = load_sound('assets/sounds/win.ogg')
-lose_snd = load_sound('assets/sounds/lose.ogg')
+jump_snd = load_sound(application_path + 'assets/sounds/jump.ogg')
+gem_snd = load_sound(application_path + 'assets/sounds/gem.ogg')
+complete_snd = load_sound(application_path + 'assets/sounds/complete.ogg')
+win_snd = load_sound(application_path + 'assets/sounds/win.ogg')
+lose_snd = load_sound(application_path + 'assets/sounds/lose.ogg')
 
 # Images
-idle = load_image('assets/images/characters/platformChar_idle.png')
-walk = [load_image('assets/images/characters/platformChar_walk1.png'),
-        load_image('assets/images/characters/platformChar_walk2.png')]
-jump = load_image('assets/images/characters/platformChar_jump.png')
-hurt = load_image('assets/images/characters/platformChar_hurt.png')
+idle = load_image(application_path + 'assets/images/characters/platformChar_idle.png')
+walk = [load_image(application_path + 'assets/images/characters/platformChar_walk1.png'),
+        load_image(application_path + 'assets/images/characters/platformChar_walk2.png')]
+jump = load_image(application_path + 'assets/images/characters/platformChar_jump.png')
+hurt = load_image(application_path + 'assets/images/characters/platformChar_hurt.png')
                    
 hero_images = { "idle_rt": idle,
                 "walk_rt": walk,
@@ -107,36 +113,36 @@ hero_images = { "idle_rt": idle,
                 "jump_lt": flip_image(jump),
                 "hurt_lt": flip_image(hurt) }
              
-tile_images = { "Grass": load_image('assets/images/tiles/platformPack_tile001.png'),
-                "Platform": load_image('assets/images/tiles/platformPack_tile041.png'),
-                "Red_Platform": load_image('assets/images/tiles/platformPack_tile020.png'),
-                "Sand": load_image('assets/images/tiles/platformPack_tile002.png'),
-                "Dirt": load_image('assets/images/tiles/platformPack_tile004.png'),
-                "Lava_Surface": load_image('assets/images/tiles/platformPack_tile006.png'),
-                "Lava": load_image('assets/images/tiles/platformPack_tile018.png'),
-                "Lamp": load_image('assets/images/tiles/lamp.png'),
-                "Door": load_image('assets/images/tiles/platformPack_tile048.png') }
+tile_images = { "Grass": load_image(application_path + 'assets/images/tiles/platformPack_tile001.png'),
+                "Platform": load_image(application_path + 'assets/images/tiles/platformPack_tile041.png'),
+                "Red_Platform": load_image(application_path + 'assets/images/tiles/platformPack_tile020.png'),
+                "Sand": load_image(application_path + 'assets/images/tiles/platformPack_tile002.png'),
+                "Dirt": load_image(application_path + 'assets/images/tiles/platformPack_tile004.png'),
+                "Lava_Surface": load_image(application_path + 'assets/images/tiles/platformPack_tile006.png'),
+                "Lava": load_image(application_path + 'assets/images/tiles/platformPack_tile018.png'),
+                "Lamp": load_image(application_path + 'assets/images/tiles/lamp.png'),
+                "Door": load_image(application_path + 'assets/images/tiles/platformPack_tile048.png') }
         
-basic_enemy_images = [ load_image('assets/images/characters/platformPack_tile024a.png'),
-                       load_image('assets/images/characters/platformPack_tile024b.png') ]
+basic_enemy_images = [ load_image(application_path + 'assets/images/characters/platformPack_tile024a.png'),
+                       load_image(application_path + 'assets/images/characters/platformPack_tile024b.png') ]
 
-platform_enemy_images = [ load_image('assets/images/characters/platformPack_tile011a.png'),
-                          load_image('assets/images/characters/platformPack_tile011b.png') ]
+platform_enemy_images = [ load_image(application_path + 'assets/images/characters/platformPack_tile011a.png'),
+                          load_image(application_path + 'assets/images/characters/platformPack_tile011b.png') ]
 
-spike_enemy_images = [ load_image('assets/images/characters/platformPack_tile043.png') ]
+spike_enemy_images = [ load_image(application_path + 'assets/images/characters/platformPack_tile043.png') ]
 
-item_images = { "Gem": load_image('assets/images/items/platformPack_item008.png'),
-                "Reverse_Gem": load_image('assets/images/items/platformPack_item010.png') }
+item_images = { "Gem": load_image(application_path + 'assets/images/items/platformPack_item008.png'),
+                "Reverse_Gem": load_image(application_path + 'assets/images/items/platformPack_item010.png') }
 
 # Levels
-levels = ["assets/levels/level_1.json",
-          "assets/levels/level_2.json",
-          "assets/levels/level_3.json",
-          "assets/levels/level_4.json",
-          "assets/levels/level_5.json",
-          "assets/levels/level_6.json",
-          "assets/levels/level_7.json",
-          "assets/levels/level_8.json" ]
+levels = [application_path + "assets/levels/level_1.json",
+          application_path + "assets/levels/level_2.json",
+          application_path + "assets/levels/level_3.json",
+          application_path + "assets/levels/level_4.json",
+          application_path + "assets/levels/level_5.json",
+          application_path + "assets/levels/level_6.json",
+          application_path + "assets/levels/level_7.json",
+          application_path + "assets/levels/level_8.json" ]
     
 # Sprite classes
 class Tile(pygame.sprite.Sprite):
