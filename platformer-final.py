@@ -1,5 +1,5 @@
 # A Normal Platformer is developed by Christopher G. Rodriguez
-# Created April 24, 2019 (Updated on May 29, 2019)
+# Created April 24, 2019 (Completed on June 4, 2019)
 #
 # 5th Period Programming
 # See READ_ME file for instructions and credits!
