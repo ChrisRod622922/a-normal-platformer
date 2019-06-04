@@ -1,6 +1,5 @@
 ## Welcome to the Official Page for A Normal Platformer!
 
-### About
 This game is a typical platformer that increasingly gets difficult as you progress. To download the latest ZIP, [CLICK HERE](https://github.com/ChrisRod622922/a-normal-platformer/archive/master.zip). If you would like to download the Windows executable file, CLICK HERE.
 
 ### Story
