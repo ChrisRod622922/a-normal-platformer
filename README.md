@@ -1,6 +1,6 @@
 ## Welcome to the Official Page for A Normal Platformer!
 
-This game is a typical platformer that increasingly gets difficult as you progress. To download the latest ZIP, [CLICK HERE](https://github.com/ChrisRod622922/a-normal-platformer/archive/master.zip). If you would like to download the Windows executable file, [CLICK HERE](https://github.com/ChrisRod622922/a-normal-platformer/releases/download/v1.0/a_normal_platformer.exe).
+This game is a typical platformer that increasingly gets difficult as you progress. To download the latest ZIP, [CLICK HERE](https://github.com/ChrisRod622922/a-normal-platformer/archive/master.zip). If you would like to download the MacOS version, [CLICK HERE](https://github.com/ChrisRod622922/a-normal-platformer/releases/download/v1.0/a_normal_platformer.exe).
 
 ### Story
 You awake in a limbo world riddled with enemies and strange gems, lit only by the mysterious nightsky and lamps that light the path to an unknown destination. As the player, you must progress to the very end in hopes of escaping the limbo.
