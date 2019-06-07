@@ -48,20 +48,19 @@ In order to win the game, your score must equal 0. This is accomplished by acqui
 ### Credits
 
 #### Images
-https://kenney.nl/assets/simplified-platformer-pack (Characters, Platforms, Items)
-https://bayat.itch.io/platform-game-assets/ (Backgrounds)
-https://www.deviantart.com/shippd/art/Blue-sky-s-at-night-119039391 (Blue sky's at night by ShippD on DeviantArt) (Start screen)
+[Characters, Platforms, Items](https://kenney.nl/assets/simplified-platformer-pack)
+[Backgrounds](https://www.deviantart.com/shippd/art/Blue-sky-s-at-night-119039391)
 
 #### Sounds
-https://freesound.org/people/Leszek_Szary/sounds/146726/ (Jump)
-https://freesound.org/people/DrMinky/sounds/166184/ (Gem)
-https://freesound.org/people/Leszek_Szary/sounds/171670/ (Completion of Level)
-https://freesound.org/people/Kastenfrosch/sounds/162458/ (Win)
-https://freesound.org/people/ProjectsU012/sounds/333785/ (Lose)
+[Jump](https://freesound.org/people/Leszek_Szary/sounds/146726/)
+[Gem](https://freesound.org/people/DrMinky/sounds/166184/)
+[Completion of Level](https://freesound.org/people/Leszek_Szary/sounds/171670/)
+[Win](https://freesound.org/people/Kastenfrosch/sounds/162458/)
+[Lose](https://freesound.org/people/ProjectsU012/sounds/333785/)
 
 #### Music
-https://freesound.org/people/bolkmar/sounds/412345/ (Main Theme)
+[Main Theme](https://freesound.org/people/bolkmar/sounds/412345/)
 
 #### Fonts
-https://www.1001fonts.com/cheri-font.html (Cheri Font Family)
-https://www.1001fonts.com/goodfish-font.html
+[Cheri Font Family](https://www.1001fonts.com/cheri-font.html)
+[Goodfish Font](https://www.1001fonts.com/goodfish-font.html)
